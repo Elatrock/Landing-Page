@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open sans', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: #0b1139;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    height: 90px;
+    background-color: #101852;
+    font-weight: bold;
+}
+
+header .barra_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .barra_nav .logo {
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+}
+
+header .barra_nav .logo:hover {
+    cursor: pointer;
+}
+
+header .barra_nav .links {
+    display: flex;
+    margin: auto;
+    list-style: none;
+    gap: 50px;
+}
+
+header .barra_nav .links a {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+header .barra_nav .links a:hover {
+    background-color: lightcoral;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+header .barra_nav .login {
+    margin: auto;
+    background-color: lightcoral;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+header .barra_nav .login:hover {
+    scale: 1.05;
+}
+
+header .barra_nav .menu_btn {
+    display: none;
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+}
+
+header .barra_nav .menu_btn:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    header .barra_nav .links,
+    header .barra_nav .login {
+        display: none;
+    }
+
+    header .barra_nav .menu_btn {
+        display: flex;
+    }
+}
