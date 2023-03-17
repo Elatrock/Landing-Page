@@ -39,6 +39,7 @@ header .barra_nav .logo {
 
 header .barra_nav .logo:hover {
     cursor: pointer;
+    scale: 1.05;
 }
 
 header .barra_nav .links {
@@ -61,6 +62,7 @@ header .barra_nav .links a:hover {
     border-radius: 20px;
     border: none;
     outline: none;
+    transition: all 0.2s linear 0s;
 }
 
 header .barra_nav .login {
@@ -74,6 +76,7 @@ header .barra_nav .login {
 
 header .barra_nav .login:hover {
     scale: 1.05;
+    transition: all 0.2s linear 0s;
 }
 
 header .barra_nav .menu_btn {
@@ -87,6 +90,81 @@ header .barra_nav .menu_btn:hover {
     cursor: pointer;
 }
 
+main .jumbotron {
+    background-color: #101852;
+    width: 100%;
+    height: 520px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .jumbotron .jumbo_img {
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20rem;
+    color: white;
+    margin: 30px;
+}
+
+main .jumbotron .jumbo_txt {
+    justify-content: flex-end;
+    margin: 30px;
+}
+
+main .jumbotron .jumbo_txt .p_1 {
+    color: white;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+main .jumbotron .jumbo_txt .p_2 {
+    color: white;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+main .jumbotron .jumbo_txt .contenedor_sub {
+    display: flex;
+    background-color: white;
+    scale: 1rem;
+    height: 60px;
+    border: 2px;
+    border-radius: 10px;
+    outline: 2px;
+}
+
+main .jumbotron .jumbo_txt .contenedor_sub .suscribir_bar {
+    margin: 10px;
+    width: 100%;
+    scale: 1rem;
+    border: 2px;
+    border-radius: 2px;
+    outline: 2px;
+    font-size: 20px;
+    font-family: 'Lucida Console';
+}
+
+main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn {
+    background-color: #0b1139;
+    width: 200px;
+    
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Console';
+    
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 4px;
+}
+
+main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:hover {
+    background-color: lightcoral;
+}
+
 @media (max-width: 900px) {
     header .barra_nav .links,
     header .barra_nav .login {
@@ -95,5 +173,31 @@ header .barra_nav .menu_btn:hover {
 
     header .barra_nav .menu_btn {
         display: flex;
+    }
+
+    main .jumbotron .jumbo_img {
+        font-size: 5rem;
+    }
+
+    main .jumbotron .jumbo_txt .p_1 {
+        font-size: 12px;
+    }
+
+    main .jumbotron .jumbo_txt .p_2 {
+        font-size: 10px;
+    }
+
+    main .jumbotron .jumbo_txt .contenedor_sub {
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    main .jumbotron .jumbo_txt .contenedor_sub .suscribir_bar {
+        font-size: 0.7rem;
+    }
+
+    main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn {
+        width: 150px;
+        font-size: 0.5rem;
     }
 }
