@@ -16,18 +16,17 @@ body {
 
 header {
     position: relative;
-    padding: 0 2rem;
+    padding: 1.50rem 1rem;
     display: grid;
     gap: 20px;
     width: 100%;
-    height: 90px;
+    height: 100%;
     background-color: #101852;
     font-weight: bold;
 }
 
 header .barra_nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -81,20 +80,21 @@ header .barra_nav .login:hover {
 
 header .barra_nav .menu_btn {
     display: none;
-    margin: auto;
+    padding: 0.5rem 1rem;
     color: white;
     font-size: 2rem;
 }
 
 header .barra_nav .menu_btn:hover {
     cursor: pointer;
+    scale: 1.05;
 }
 
 main .jumbotron {
-    background-color: #101852;
+    background-color: #0b1139;
     width: 100%;
-    height: 520px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    height: 100%;
+    padding: 1rem 0.5rem 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -163,12 +163,133 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn {
 
 main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:hover {
     background-color: lightcoral;
+    scale: 0.95;
+    transition: all 0.2s linear 0s;
 }
 
-@media (max-width: 900px) {
+main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:active {
+    scale: 0.90;
+    background-color: #0b1139;
+}
+
+main .adicional {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0.5rem 3rem 0.5rem;
+}
+
+main .adicional .adicional_hdr {
+    padding-bottom: 3rem;
+    align-items: center;
+    justify-items: center;
+}
+
+main .adicional .adicional_hdr p {
+    font-size: 30px;
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+main .adicional .adicional_cnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+main .adicional .adicional_cnt .plan {
+    color: white;
+    background-color: #101852;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 20px;
+    width: 270px;
+    height: 510px;
+    gap: 20px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+main .adicional .adicional_cnt .plan:hover {
+    box-shadow: 0px 0px 10px 7px lightgray;
+    color: lightcoral;
+    scale: 1.05;
+    transition: all 0.2s linear 0s;
+}
+
+main .adicional .adicional_cnt .plan_img {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 8rem;
+    width: 90%;
+    height: 90%;
+}
+
+main .adicional .adicional_cnt .plan_txt {
+    padding: 1rem;
+    text-align: left;
+    justify-content: center;
+    color: white;
+}
+
+main .adicional .adicional_cnt .plan_txt p:first-child {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+main .adicional .adicional_cnt .plan_btn {
+    position: absolute;
+    padding-bottom: 1rem;
+    bottom: 0;
+    justify-content: center;
+}
+
+main .adicional .adicional_cnt .plan_btn .btn {
+    background-color: #0b1139;
+    width: 200px;
+    height: 45px;
+    
+    color: white;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 0px;
+}
+
+main .adicional .adicional_cnt .plan_btn .btn:hover {
+    border-color: lightcoral;
+    color: lightcoral;
+    transition: 0.2s linear;
+}
+
+main .adicional .adicional_cnt .plan_btn .btn:active {
+    scale: 0.95;
+}
+
+/* @media (max-width: 900px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
     header .barra_nav .links,
     header .barra_nav .login {
         display: none;
+    }
+
+    header .barra_nav .logo {
+        display: flex;
+        margin: 0;
+        padding: 0.5rem 1rem;
     }
 
     header .barra_nav .menu_btn {
@@ -184,7 +305,7 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:hover {
     }
 
     main .jumbotron .jumbo_txt .p_2 {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     main .jumbotron .jumbo_txt .contenedor_sub {
@@ -200,4 +321,4 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:hover {
         width: 150px;
         font-size: 0.5rem;
     }
-}
+} */
