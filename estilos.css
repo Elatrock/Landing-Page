@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open sans', sans-serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -94,21 +95,23 @@ main .jumbotron {
     background-color: #0b1139;
     width: 100%;
     height: 100%;
-    padding: 1rem 0.5rem 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 main .jumbotron .jumbo_img {
     justify-content: flex-start;
-    align-items: center;
-    font-size: 20rem;
-    color: white;
-    margin: 30px;
+    width: 100%;
+    height: 470px;
+    position: relative;
+	background-size: cover;
+	background-position: center center;
+    overflow: hidden;
 }
 
 main .jumbotron .jumbo_txt {
     justify-content: flex-end;
+    padding: 1rem 0.5rem 1rem;
     margin: 30px;
 }
 
@@ -123,14 +126,14 @@ main .jumbotron .jumbo_txt .p_2 {
     color: white;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 main .jumbotron .jumbo_txt .contenedor_sub {
     display: flex;
     background-color: white;
     scale: 1rem;
-    height: 60px;
+    height: 50px;
     border: 2px;
     border-radius: 10px;
     outline: 2px;
@@ -143,7 +146,7 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_bar {
     border: 2px;
     border-radius: 2px;
     outline: 2px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Lucida Console';
 }
 
@@ -152,7 +155,7 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn {
     width: 200px;
     
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Lucida Console';
     
     border-radius: 10px;
@@ -172,36 +175,39 @@ main .jumbotron .jumbo_txt .contenedor_sub .suscribir_btn:active {
     background-color: #0b1139;
 }
 
-main .adicional {
-    background-color: white;
+main .blog {
+    background-color: rgb(248, 248, 248);
     width: 100%;
     height: 100%;
-    padding: 3rem 0.5rem 3rem 0.5rem;
+    padding: 5rem 0.5rem 5rem 0.5rem;
 }
 
-main .adicional .adicional_hdr {
+main .blog .blog_hdr {
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 3rem;
     align-items: center;
     justify-items: center;
 }
 
-main .adicional .adicional_hdr p {
-    font-size: 30px;
+main .blog .blog_hdr p {
+    font-size: 23px;
     text-align: center;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
 }
 
-main .adicional .adicional_cnt {
+main .blog .blog_cnt {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
 
-main .adicional .adicional_cnt .plan {
-    color: white;
-    background-color: #101852;
+main .blog .blog_cnt .plan {
+    box-shadow: 0px 5px 7px 5px lightgray;
+    color: #101852;
+    background-color: rgb(252, 252, 252);
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 20px;
     width: 270px;
@@ -215,14 +221,12 @@ main .adicional .adicional_cnt .plan {
     justify-content: center;
 }
 
-main .adicional .adicional_cnt .plan:hover {
-    box-shadow: 0px 0px 10px 7px lightgray;
-    color: lightcoral;
+main .blog .blog_cnt .plan:hover {
     scale: 1.05;
     transition: all 0.2s linear 0s;
 }
 
-main .adicional .adicional_cnt .plan_img {
+main .blog .blog_cnt .plan_img {
     display: flex;
     justify-content: center;
     background-size: contain;
@@ -232,26 +236,26 @@ main .adicional .adicional_cnt .plan_img {
     height: 90%;
 }
 
-main .adicional .adicional_cnt .plan_txt {
+main .blog .blog_cnt .plan_txt {
     padding: 1rem;
     text-align: left;
     justify-content: center;
-    color: white;
+    color: black;
 }
 
-main .adicional .adicional_cnt .plan_txt p:first-child {
+main .blog .blog_cnt .plan_txt p:first-child {
     font-size: 1.1rem;
     font-weight: bolder;
 }
 
-main .adicional .adicional_cnt .plan_btn {
+main .blog .blog_cnt .plan_btn {
     position: absolute;
     padding-bottom: 1rem;
     bottom: 0;
     justify-content: center;
 }
 
-main .adicional .adicional_cnt .plan_btn .btn {
+main .blog .blog_cnt .plan_btn .btn {
     background-color: #0b1139;
     width: 200px;
     height: 45px;
@@ -266,14 +270,127 @@ main .adicional .adicional_cnt .plan_btn .btn {
     border-width: 0px;
 }
 
-main .adicional .adicional_cnt .plan_btn .btn:hover {
+main .blog .blog_cnt .plan_btn .btn:hover {
     border-color: lightcoral;
     color: lightcoral;
     transition: 0.2s linear;
+    scale: 1.05;
 }
 
-main .adicional .adicional_cnt .plan_btn .btn:active {
+main .blog .blog_cnt .plan_btn .btn:active {
     scale: 0.95;
+}
+
+main .adicional {
+    width: 100%;
+    height: 100%;
+    background-color: #101852;
+    padding: 3rem 1rem 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .adicional .adicional_hdr {
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+main .adicional .adicional_hdr p {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+main .adicional_hdr .adic_btn {
+    margin-right: 20px;
+    background-color: #0b1139;
+    width: 180px;
+    height: 40px;
+    
+    color: white;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 0px;
+}
+
+main .adicional_hdr .adic_btn:hover {
+    background-color: lightcoral;
+    transition: 0.2s linear;
+    scale: 1.05;
+}
+
+main .adicional_cnt {
+    align-items: center;
+    text-align: center;
+}
+
+main .adicional_cnt img {
+    width: 500px;
+    background-position: center center;
+}
+
+footer .foot_top {
+    background-color: rgb(252, 252, 252);
+    padding: 2rem 2rem 6rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+footer .cnt_foot_izq {
+    gap: 30px;
+    display: flex;
+    justify-content: left;
+}
+
+footer .cnt_foot_izq i {
+    color: rgb(179, 179, 179);
+    font-size: 2rem;
+}
+
+footer .cnt_foot_izq i:hover {
+    color: gray;
+    transition: all 0.2s linear 0s;
+}
+
+footer .cnt_foot_der {
+    justify-content: right;
+    gap: 5rem;
+    display: flex;
+}
+
+footer .cnt_foot_der .foot_ul {
+    list-style: none;
+    color: rgb(179, 179, 179);
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+footer .cnt_foot_der .foot_li {
+    font-weight: normal;
+}
+
+footer .cnt_foot_der .foot_li:hover {
+    font-weight: normal;
+    color: gray;
+    transition: all 0.2s linear 0s;
+}
+
+footer .foot_low {
+    background-color: rgb(252, 252, 252);
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+footer .foot_low p {
+    color: rgb(179, 179, 179);
+    text-align: center;
 }
 
 /* @media (max-width: 900px) {
