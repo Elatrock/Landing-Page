@@ -32,7 +32,6 @@ header .barra_nav {
 }
 
 header .barra_nav .logo {
-    margin: auto;
     color: white;
     font-size: 2rem;
 }
@@ -200,7 +199,6 @@ main .blog .blog_hdr p {
 main .blog .blog_cnt {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
     justify-items: center;
 }
 
@@ -306,7 +304,7 @@ main .adicional .adicional_hdr p {
 }
 
 main .adicional_hdr .adic_btn {
-    margin-right: 20px;
+    margin: 10px;
     background-color: #0b1139;
     width: 180px;
     height: 40px;
@@ -393,7 +391,19 @@ footer .foot_low p {
     text-align: center;
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 1024px) {
+    main .blog .blog_cnt {
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main .blog .blog_cnt .plan {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 900px) {
     header {
         padding: 0.5rem 1rem;
     }
@@ -413,8 +423,14 @@ footer .foot_low p {
         display: flex;
     }
 
+    main .jumbotron {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
     main .jumbotron .jumbo_img {
         font-size: 5rem;
+        height: 300px;
     }
 
     main .jumbotron .jumbo_txt .p_1 {
@@ -438,4 +454,52 @@ footer .foot_low p {
         width: 150px;
         font-size: 0.5rem;
     }
-} */
+
+    main .blog .blog_cnt {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    main .blog .blog_cnt .plan {
+        margin: 20px;
+    }
+
+    main .adicional {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main .adicional .adicional_hdr {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    main .adicional_hdr .adic_btn {
+        margin-right: 0px;
+        width: 160px;
+    }
+
+    main .adicional_cnt img {
+        width: 100%;
+    }
+
+    footer .foot_top {
+        padding: 2rem 2rem 2rem 2rem;
+        grid-template-columns: none;
+        gap: 20px;
+    }
+
+    footer .cnt_foot_izq {
+        justify-content: center;
+    }
+
+    footer .cnt_foot_der {
+        justify-content: space-between;
+        display: grid;
+    }
+
+    footer .cnt_foot_der .foot_ul {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
